@@ -1,0 +1,76 @@
+.Tab-Box{
+    display: flex;
+}
+.Tab-Card{
+    background-color: #fff;
+    text-decoration: none;
+    padding: 20px 25px;
+    color: #2c2c2c!important;
+    position: relative;
+    /* width: 100%; */
+    margin-bottom: 20px;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.Tab-Card:hover{
+    outline: 1px solid #8e419c;
+}
+.Tab-Card-Content {
+    display: contents;
+}
+.Tab-Card-Logo {
+    margin-right: 20px;
+}
+.Tab-Card-Text{
+    font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+    font-size: 18px;
+}
+
+
+@media screen and (min-width : 768px) and (max-width : 1024px){
+    .Tab-Card{
+        padding: 30px;
+        margin: 0 10px 25px;
+        display: block;
+        width: calc(33.33333% - 100px);
+        justify-content: center;
+    }
+    .Tab-Card-Content {
+        display: block;
+    }
+    .Tab-Card-Logo {
+        margin: 0px;
+    }
+    .Tab-Container{
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .Tab-Card{
+        padding: 30px;
+        margin: 0 10px 25px;
+        flex-grow: 1;
+        width: min-content;
+        justify-content: center;
+    }
+    .Tab-Card-Content {
+        display: block;
+    }
+    .Tab-Card-Logo {
+        margin: 0px;
+    }
+    .Tab-Container {
+        display: flex;
+        width: 100%;
+    }
+    .Tab-Card-Text{
+        font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+        font-size: 14px;
+    }
+}
