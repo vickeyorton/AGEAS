@@ -3,7 +3,6 @@ import "./Footer.css";
 
 function Footer() {
     const accordionActions = (e) =>{
-        console.log(e);
         const element = e.target.nextSibling;
         let style = window.getComputedStyle(element);
         let display = style.getPropertyValue('display');
