@@ -1,9 +1,10 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './InsuranceTab.css';
 import CarInfo from '../CarInfo/CarInfo';
 
 
 function InsuranceTab() {
+    const [selectedInsurance,setSelectedInsurance] = useState("");
 
     const Tab = [
         {   
@@ -70,7 +71,7 @@ function InsuranceTab() {
             let section = e.target.getAttribute("name");
             let content = document.querySelectorAll(`.${section}-Section`)[0];
             content.classList.add("active");
-            // console.log(e.target)
+            setSelectedInsurance(section);
         }else{
             
             e.target.offsetParent.classList.add("active");
@@ -80,11 +81,10 @@ function InsuranceTab() {
             let section = e.target.offsetParent.getAttribute("name");
             let content = document.querySelectorAll(`.${section}-Section`)[0];
             content.classList.add("active");
+            setSelectedInsurance(section);
 
             let hide = e.target.offsetParent.querySelectorAll(".Tab-Logo-dark")[0];
             hide.classList.add('hide');
-            
-            // console.log(e.target.offsetParent)
         }
     }
 
@@ -109,7 +109,7 @@ function InsuranceTab() {
                     })}
                 </div>
             </div>
-            <div className="Reference-Block">
+            <div className={selectedInsurance && "Reference-Block"}>
                 <div className="Reference-Block-Container">
                     <div className="Insurance-Section Car-Section">
                         <CarInfo/>

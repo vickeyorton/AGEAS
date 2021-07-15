@@ -80,7 +80,7 @@
 
 @media screen and (min-width: 1024px){
     .Tab-Card{
-        padding: 30px;
+        /* padding: 30px; */
         margin: 0 10px 25px;
         flex-grow: 1;
         width: min-content;
